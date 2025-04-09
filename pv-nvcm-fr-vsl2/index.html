@@ -78,7 +78,7 @@
       .comments-container {
           max-width: 800px;
           margin: 30px auto;
-          background-color: #F9FAFB;
+          background-color: #EBEBEB;
           border-radius: 10px;
           padding: 20px;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -95,7 +95,7 @@
           display: flex;
           align-items: flex-start;
           padding: 15px 0;
-          border-bottom: 1px solid #E5E7EB;
+          border-bottom: 1px solid #BFBFBF;
       }
 
       .comment:last-child {
@@ -122,12 +122,12 @@
 
       .comment-text {
           font-size: 14px;
-          color: #6C757D;
+          color: #636669;
           margin-bottom: 10px;
       }
 
       .nested-comments {
-          border-left: 2px solid #E5E7EB;
+          border-left: 2px solid #BFBFBF;
           padding-left: 10px;
       }
       
@@ -210,6 +210,78 @@
 	  display: block;
 	  margin: 0 auto;
 	}
+	
+	.green-dot {
+	  width: 12px;
+	  height: 12px;
+	  background-color: green;
+	  border-radius: 50%;
+	  animation: blink 1s infinite;
+	}
+
+	@keyframes blink {
+	  0%, 100% { opacity: 1; }
+	  50% { opacity: 0; }
+	}
+
+	.hourglass-icon {
+	  color: red;
+	  animation: rotate 2s linear infinite;
+	}
+
+	@keyframes rotate {
+	  from { transform: rotate(0deg); }
+	  to { transform: rotate(360deg); }
+	}
+	
+    .faq-section {
+      background-color: #e6edff;
+      padding: 40px 20px;
+    }
+
+    .faq-section h2 {
+      color: #366ff0;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .faq-item {
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      margin: 10px auto;
+      max-width: 800px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .faq-question {
+      color: #3366FF;
+      font-weight: 600;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      padding: 0 20px 15px;
+      color: #333333;
+      display: none;
+      line-height: 1.6;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .arrow {
+      transform: rotate(180deg);
+    }
   </style>
 </head>
 <body>
@@ -228,6 +300,25 @@
 
   <!-- Sessão escondida com imagens clicáveis -->
   <div class="esconder">
+		<!-- Nova sessão com fundo azul e título -->
+		<div style="background-color: #366ff0; padding: 20px; text-align: center;">
+		  <h2 style="color: #ffffff; margin: 0;">
+			Profitez de votre réduction sur NerveCalm dès maintenant, tant qu’il en reste en stock !
+		  </h2>
+		</div>
+
+		<!-- Quadro de status de venda -->
+		<div style="background-color: #e6edff; padding: 20px; text-align: center;">
+		  <div style="color: #366ff0; font-weight: bold; font-size: 18px; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+			<span class="green-dot"></span>
+			Statut de Vente : Actif
+		  </div>
+		  <div style="color: #366ff0; font-weight: bold; font-size: 18px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+			<i class="fas fa-hourglass-half hourglass-icon"></i>
+			Quantité Restante : <span class="stock-counter">127</span>
+		  </div>
+		</div>
+  
       <div class="hidden-images">
           <a href="https://vm-business.mycartpanda.com/checkout/176905235:1" target="_blank">
               <img src="images/6pots.png" alt="Imagem 6">
@@ -243,11 +334,149 @@
 	  <div class="garantia-container">
 		<img src="images/garantia.png" alt="Garantie">
 		<div class="session6-text">
+		<h1 style="margin: 20px 0 10px; color: #000000;">Garantie de Satisfaction 100 %</h1>
 		  <p>
-			Vous n'êtes toujours pas sûr ? Rappelez-vous, Nerve Calm est livré avec une garantie de remboursement à 100 % pendant 60 jours complets ! Cela signifie que si vous n'obtenez pas les résultats promis ou si vous changez d'avis pour quelque raison que ce soit, il vous suffit d'appeler ou d'envoyer un courriel à notre équipe de support dans les 2 prochains mois pour récupérer chaque centime rapidement. Que risquez-vous à perdre ? Votre succès est pratiquement garanti !
+			Essayez NerveCalm en toute sérénité grâce à notre Garantie Satisfaction Totale de 60 jours ! Nous avons une telle confiance dans les résultats de NerveCalm que nous voulons éliminer tout risque de votre décision d’achat. C’est pourquoi nous vous offrons une garantie inconditionnelle de 60 jours. Si, pour une raison quelconque, vous sentez que ce produit n’est pas fait pour vous, il vous suffit de tout renvoyer dans un délai de 60 jours – vous serez intégralement remboursé. Pas de conditions cachées, aucune pression. C’est notre promesse de transparence et d’engagement envers votre satisfaction !
 		  </p>
 		</div>
 	  </div>
+	  
+		<!-- Nova sessão com fundo azul e título -->
+		<div style="background-color: #366ff0; padding: 20px; text-align: center;">
+		  <h2 style="color: #ffffff; margin: 0;">
+			Profitez de votre réduction sur NerveCalm dès maintenant, tant qu’il en reste en stock !
+		  </h2>
+		</div>
+
+		<!-- Quadro de status de venda -->
+		<div style="background-color: #e6edff; padding: 20px; text-align: center;">
+		  <div style="color: #366ff0; font-weight: bold; font-size: 18px; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+			<span class="green-dot"></span>
+			Statut de Vente : Actif
+		  </div>
+		  <div style="color: #366ff0; font-weight: bold; font-size: 18px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+			<i class="fas fa-hourglass-half hourglass-icon"></i>
+			Quantité Restante : <span class="stock-counter">127</span>
+		  </div>
+		</div>
+  
+      <div class="hidden-images">
+          <a href="https://vm-business.mycartpanda.com/checkout/176905235:1" target="_blank">
+              <img src="images/6pots.png" alt="Imagem 6">
+          </a>
+          <a href="https://vm-business.mycartpanda.com/checkout/176905234:1" target="_blank">
+              <img src="images/3pots.png" alt="Imagem 3">
+          </a>
+          <a href="https://vm-business.mycartpanda.com/checkout/176905233:1" target="_blank">
+              <img src="images/2pots.png" alt="Imagem 1">
+          </a>
+      </div>
+
+	  <!-- FAQ Section -->
+	  <div class="faq-section">
+		<h2>Foire Aux Questions</h2>
+
+		<div class="faq-item">
+		  <div class="faq-question">
+			Puis-je prendre Nerve Calm ?
+			<span class="arrow">&#9660;</span>
+		  </div>
+		  <div class="faq-answer">
+			Nous vous recommandons toujours de consulter votre médecin avant de prendre tout complément de santé. Ce que nous pouvons vous dire, c’est que Nerve Calm est une formule 100 % naturelle, composée uniquement d’ingrédients vérifiés. Il est fabriqué dans une installation enregistrée auprès de l’agence fédérale du Département de la Santé et des Services sociaux, suivant les directives des Bonnes Pratiques de Fabrication (BPF). Les ingrédients utilisés sont de la plus haute qualité, testés pour leur pureté et leur efficacité.
+		  </div>
+		</div>
+
+		<div class="faq-item">
+		  <div class="faq-question">
+			Est-ce que Nerve Calm fonctionne vraiment pour moi ?
+			<span class="arrow">&#9660;</span>
+		  </div>
+		  <div class="faq-answer">
+			C’est une excellente question. Nerve Calm se distingue des autres solutions parce qu’il agit à la racine de la neuropathie et des douleurs du nerf sciatique : il réduit l’inflammation, soutient la régénération et améliore la santé globale du système nerveux. Nerve Calm repose sur une base scientifique solide et permet de soulager la douleur de façon rapide et efficace. Les ingrédients qu’il contient comptent parmi les plus puissants au monde. Nerve Calm fonctionne pour la grande majorité des gens, mais comme vous le savez, aucun produit ne fonctionne à 100 %. C’est pourquoi nous offrons une garantie de satisfaction de 60 jours.
+		  </div>
+		</div>
+
+		<div class="faq-item">
+		  <div class="faq-question">
+			Et si Nerve Calm ne fonctionne pas pour moi ?
+			<span class="arrow">&#9660;</span>
+		  </div>
+		  <div class="faq-answer">
+			Encore une excellente question. D’abord, sachez que Nerve Calm est basé sur la science et formulé uniquement avec les ingrédients naturels les plus puissants. Il fonctionne pour presque tout le monde, mais il est vrai que rien ne marche pour tout le monde à 100 %. C’est pour cette raison que nous vous proposons une garantie de satisfaction solide de 60 jours. Cela signifie que si vous changez d’avis ou sentez que ce produit n’est pas fait pour vous, il vous suffit de contacter notre service client via ce site sécurisé, disponible 24h/24 et 7j/7. Notre équipe sympathique sera ravie de vous rembourser, sans poser de questions.
+		  </div>
+		</div>
+
+		<div class="faq-item">
+		  <div class="faq-question">
+			Combien de flacons de Nerve Calm devrais-je commander ?
+			<span class="arrow">&#9660;</span>
+		  </div>
+		  <div class="faq-answer">
+			Pour profiter pleinement des bienfaits de Nerve Calm, il est préférable de le prendre sur la durée. La plupart des utilisateurs que nous connaissons personnellement le prennent depuis des années, simplement parce que le soulagement ressenti et l’énergie retrouvée rendent la décision évidente. C’est pour cela que nous offrons des réductions importantes sur les packs de 3 et 6 flacons — pour que vous puissiez tirer le meilleur parti de Nerve Calm sans vous soucier du coût.
+		  </div>
+		</div>
+
+		<div class="faq-item">
+		  <div class="faq-question">
+			Dans combien de temps vais-je recevoir ma commande ?
+			<span class="arrow">&#9660;</span>
+		  </div>
+		  <div class="faq-answer">
+			Les commandes sont préparées et expédiées sous 2 à 3 jours ouvrables. Vous devriez la recevoir sous 5 à 7 jours si vous êtes aux États-Unis, ou entre 10 et 12 jours à l’international, selon les délais de douane.
+		  </div>
+		</div>
+
+		<div class="faq-item">
+		  <div class="faq-question">
+			S’agit-il d’un paiement unique ou vais-je être facturé à nouveau ?
+			<span class="arrow">&#9660;</span>
+		  </div>
+		  <div class="faq-answer">
+			Oui, c’est un paiement unique. Il n’y a aucun abonnement automatique, aucune facturation mensuelle. Aucun frais caché. Le prix que vous voyez est le prix final. Et la livraison est offerte pour les packs de 3 ou 6 flacons de Nerve Calm. Nous préférons être totalement transparents sur nos tarifs, car nous savons combien c’est important pour vous.
+		  </div>
+		</div>
+
+		<div class="faq-item">
+		  <div class="faq-question">
+			Que dois-je faire maintenant ?
+			<span class="arrow">&#9660;</span>
+		  </div>
+		  <div class="faq-answer">
+			Pour profiter de Nerve Calm et entamer votre nouvelle vie sans douleur, pleine d’énergie et de bien-être, il vous suffit de choisir l’option qui vous convient le mieux en cliquant sur le bouton. Sur la page suivante, entrez vos informations et confirmez votre commande. Elle sera traitée par notre équipe logistique, puis expédiée rapidement. Vous pourrez commencer à prendre Nerve Calm dans quelques jours seulement. Cliquez sur l’option qui vous convient pour en profiter tant qu’il est encore disponible.
+		  </div>
+		</div>
+	  </div>
+	  
+		<!-- Nova sessão com fundo azul e título -->
+		<div style="background-color: #366ff0; padding: 20px; text-align: center;">
+		  <h2 style="color: #ffffff; margin: 0;">
+			Profitez de votre réduction sur NerveCalm dès maintenant, tant qu’il en reste en stock !
+		  </h2>
+		</div>
+
+		<!-- Quadro de status de venda -->
+		<div style="background-color: #e6edff; padding: 20px; text-align: center;">
+		  <div style="color: #366ff0; font-weight: bold; font-size: 18px; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+			<span class="green-dot"></span>
+			Statut de Vente : Actif
+		  </div>
+		  <div style="color: #366ff0; font-weight: bold; font-size: 18px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+			<i class="fas fa-hourglass-half hourglass-icon"></i>
+			Quantité Restante : <span class="stock-counter">127</span>
+		  </div>
+		</div>
+  
+      <div class="hidden-images">
+          <a href="https://vm-business.mycartpanda.com/checkout/176905235:1" target="_blank">
+              <img src="images/6pots.png" alt="Imagem 6">
+          </a>
+          <a href="https://vm-business.mycartpanda.com/checkout/176905234:1" target="_blank">
+              <img src="images/3pots.png" alt="Imagem 3">
+          </a>
+          <a href="https://vm-business.mycartpanda.com/checkout/176905233:1" target="_blank">
+              <img src="images/2pots.png" alt="Imagem 1">
+          </a>
+      </div>
   </div>
 
   <div class="comments-container">
@@ -387,7 +616,8 @@
       var showHiddenElements = function () {
           elsDisplayed = true;
           elsHiddenList.forEach((e) => e.style.display = "block");
-          try {
+          startSyncedStockCounter();
+		  try {
             localStorage.setItem(alreadyDisplayedKey, true);
           } catch (e) {
             console.warn('Failed to save data in localStorage: ', e);
@@ -412,6 +642,80 @@
       }
   });
   </script>
+  
+	<script>
+	function startSyncedStockCounter() {
+		let stock = 127;
+		const counters = document.querySelectorAll(".stock-counter");
+		const totalDurationMs = 1680000; // 28 minutos
+		const minStock = 9;
+		const startTime = Date.now();
+		const names = [
+		  "Émile", "Camille", "Julien", "Sophie", "Lucas", "Zoé", "Thomas", "Alice",
+		  "Gabriel", "Emma", "Noah", "Léa", "Nathan", "Inès", "Liam", "Manon",
+		  "William", "Charlotte", "James", "Amélie", "Ethan", "Clara", "Jacob", "Chloé",
+		  "Jack", "Élise", "Benjamin", "Sarah", "Henry", "Anaïs", "Daniel", "Lucie",
+		  "George", "Victoria", "Oliver", "Hélène", "Samuel", "Mia", "Matthew", "Éva"
+		];
 
+		const notification = document.createElement('div');
+		notification.id = 'purchase-notification';
+		document.body.appendChild(notification);
+
+		function showNotification(name) {
+			notification.innerHTML = `<div onclick="this.remove()" style="position: fixed; bottom: 20px; left: 10px; right: 10px; background-color: rgba(54, 179, 74, 0.9); color: white; padding: 12px 18px; border-radius: 8px; display: flex; align-items: center; font-weight: 500; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 9999; cursor: pointer; width: auto; max-width: 350px; margin: 0 auto;">
+				<i class='fas fa-check-circle' style='margin-right: 10px; font-size: 18px;'></i>
+				${name} a sécurisé son traitement avec Nerve Calm !
+			</div>`;
+			setTimeout(() => {
+				notification.innerHTML = "";
+			}, 5000);
+		}
+
+		function getRandomDecrement() {
+			return [2, 3, 6][Math.floor(Math.random() * 3)];
+		}
+
+		function getDynamicDelay(elapsed) {
+			if (elapsed < totalDurationMs * (125 / 1680)) {
+				return [10000, 12000, 15000][Math.floor(Math.random() * 3)];
+			} else if (elapsed < totalDurationMs * ((125 + 720) / 1680)) {
+				return [50000, 60000, 70000][Math.floor(Math.random() * 3)];
+			} else {
+				return [70000, 75000, 80000][Math.floor(Math.random() * 3)];
+			}
+		}
+
+		setTimeout(() => {
+			function updateStock() {
+				const elapsed = Date.now() - startTime;
+				if (stock <= minStock) return;
+
+				const decrement = getRandomDecrement();
+				stock = Math.max(minStock, stock - decrement);
+
+				counters.forEach(counter => {
+					counter.textContent = stock;
+				});
+
+				const randomName = names[Math.floor(Math.random() * names.length)];
+				showNotification(randomName);
+
+				const nextDelay = getDynamicDelay(elapsed);
+				setTimeout(updateStock, nextDelay);
+			}
+
+			updateStock();
+		}, 30000); // Inicia após 30 segundos
+	}
+	</script>
+	
+  <script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
