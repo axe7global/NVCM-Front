@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+	
+	<link rel="preload" href="https://scripts.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/ab-test/68519dee198c11a549500eb7/player.js" as="script">
+	<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+	<link rel="dns-prefetch" href="https://cdn.converteai.net">
+	<link rel="dns-prefetch" href="https://scripts.converteai.net">
+	<link rel="dns-prefetch" href="https://images.converteai.net">
+	<link rel="dns-prefetch" href="https://api.vturb.com.br">
+	
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+        }
+        .top-bar {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 22px;
+        }
+        .author-info {
+            text-align: left;
+            padding: 20px 10px;
+        }
+        .author-info .author {
+            font-weight: bold;
+        }
+        .author-info .updated {
+            color: gray;
+            font-size: 14px;
+        }
+        .video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .sound-notice {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .comments-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+        .comments-container img {
+            max-width: calc(100% - 10px);
+            margin: 0 5px;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function getCurrentDate() {
+            const today = new Date();
+            return today.toLocaleDateString(undefined, { day: '2-digit', month: '2-digit', year: '2-digit' });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('dynamic-date').textContent = getCurrentDate();
+        });
+    </script>
+</head>
+<body>
+
+    <!-- SESSION 1 -->
+    <div class="top-bar">
+        <strong>This presentation will be available only until <span id="dynamic-date" class="underline-highlight"></span></strong>
+    </div>
+
+    <!-- NOVA SESSION: INFORMACOES DO AUTOR -->
+    <div class="author-info">
+        <div class="author">By Doug Batchelor</div>
+        <div class="updated">Updated 30 minutes ago</div>
+    </div>
+
+    <!-- SESSION 2 -->
+        <script type="text/javascript" id="scr_68519dee198c11a549500eb7"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/ab-test/68519dee198c11a549500eb7/player.js", s.async=!0,document.head.appendChild(s); </script>
+
+    <!-- SESSION 3 -->
+    <div class="sound-notice">
+        <strong>Scientific references:</strong>
+    </div>
+
+    <!-- SESSION 4 -->
+    <div class="comments-container">
+        <img src="images/coments.png" alt="Comments Section">
+    </div>
+
+</body>
+</html>
